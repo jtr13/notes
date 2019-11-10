@@ -214,13 +214,6 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 <h3><span class="header-section-number">2.3.2</span> Line breaks in table cells with knitr</h3>
 <p><em>best option</em></p>
 <p>add <code>&lt;br&gt;</code></p>
-<p>(doesn’t work with <code>format=&quot;html&quot;</code>)</p>
-</div>
-<div id="line-breaks-in-table-cells-with-knitr-using-formathtml" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Line breaks in table cells with knitr, using <code>format=&quot;html&quot;</code></h3>
-<p>create actual line breaks in text with command-enter (see <a href="https://docs.google.com/spreadsheets/d/1iwCNcK1GWV7r7fIhDw-OCzD2juFSUrefPj-XaZ5hYs0/edit#gid=0" target="_blank">this sheet</a>)</p>
-<p>use <code>knitr::kable(... format = &quot;html&quot;)</code> and style the table with <code>&lt;table style=&quot;white-space:pre-line; word-wrap:break-word;&quot;&gt;</code></p>
-<p><em>creates an extra line at the beginning of each cell that I can’t get rid of</em></p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a =</span> <span class="st">&quot;asdf asdf&quot;</span>, <span class="dt">b =</span> <span class="st">&quot;asdf&lt;br&gt;asdf&quot;</span>)</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(x)</a></code></pre></div>
 <table>
@@ -237,29 +230,13 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">knitr<span class="op">::</span><span class="kw">kable</span>(x, <span class="dt">format=</span><span class="st">&quot;html&quot;</span>)</a></code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-a
-</th>
-<th style="text-align:left;">
-b
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-asdf asdf
-</td>
-<td style="text-align:left;">
-asdf&lt;br&gt;asdf
-</td>
-</tr>
-</tbody>
-</table>
+<p>(doesn’t work with <code>format=&quot;html&quot;</code>)</p>
+</div>
+<div id="line-breaks-in-table-cells-with-knitr-using-formathtml" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Line breaks in table cells with knitr, using <code>format=&quot;html&quot;</code></h3>
+<p>create actual line breaks in text with command-enter (see <a href="https://docs.google.com/spreadsheets/d/1iwCNcK1GWV7r7fIhDw-OCzD2juFSUrefPj-XaZ5hYs0/edit#gid=0" target="_blank">this sheet</a>)</p>
+<p>use <code>knitr::kable(... format = &quot;html&quot;)</code> and style the table with <code>&lt;table style=&quot;white-space:pre-line; word-wrap:break-word;&quot;&gt;</code></p>
+<p><em>creates an extra line at the beginning of each cell that I can’t get rid of</em></p>
 
 </div>
 </div>

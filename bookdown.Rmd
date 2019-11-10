@@ -70,6 +70,13 @@ Use only 5.1.0 or earlier
 
 add `<br>`
 
+
+```{r}
+x <- data.frame(a = "asdf asdf", b = "asdf<br>asdf")
+knitr::kable(x)
+```
+
+
 (doesn't work with `format="html"`)
 
 ### Line breaks in table cells with knitr, using `format="html"`
@@ -79,11 +86,5 @@ create actual line breaks in text with command-enter (see [this sheet](https://d
 use `knitr::kable(... format = "html")` and style the table with `<table style="white-space:pre-line; word-wrap:break-word;">`
 
 *creates an extra line at the beginning of each cell that I can't get rid of*
-
-```{r}
-x <- data.frame(a = "asdf asdf", b = "asdf<br>asdf")
-knitr::kable(x)
-knitr::kable(x, format="html")
-```
 
 
