@@ -10,7 +10,7 @@ description: "Random notes about bookdown and other stuff."
 
 ## Tables
 
-### Adjust column width with knitr
+### Adjust column width with knitr::kable()
 
 `html_table_width()` function:
 
@@ -23,7 +23,7 @@ html_table_width <- function(kable_output, width){
 
 [https://github.com/rstudio/bookdown/issues/122](https://github.com/rstudio/bookdown/issues/122){target="_blank"}
 
-### Line breaks in table cells with knitr
+### Line breaks in table cells with knitr::kable()
 
 *best option*
 
@@ -36,7 +36,7 @@ knitr::kable(x)
 ```
 
 
-### Line breaks in table cells with knitr, using `format="html"`
+### Line breaks in table cells with knitr::kable(), using `format="html"`
 
 Add `escape=FALSE`
 
