@@ -1,3 +1,3 @@
 [
-["index.html", "Notes Chapter 1 Prerequisites", " Notes Joyce Robbins 2019-11-09 Chapter 1 Prerequisites "]
+["index.html", "Notes Chapter 1 Bookdown 1.1 Code Styling 1.2 Font Awesome", " Notes Joyce Robbins 2019-11-09 Chapter 1 Bookdown 1.1 Code Styling Have tried everything to control the background color of code chunks as in myslidy.css (see d3 lectures folder) to no avail. Gitbook appears to work differently. I can control some things but not all. Works: pre { font-size: 200%; font-weight: bold; width: 80%; } .sourceCode { font-size: 200%; width: 40%; } Doesn’t work: pre { font-family: &quot;Times New Roman&quot;; border-color: green; color: orange; background-color: green; } This works for &lt;div class=&quot;sourceCode&quot;&gt; not &lt;pre class=&quot;sourceCode&quot;&gt; .sourceCode { background-color: green; } 1.2 Font Awesome Use only 5.1.0 or earlier "]
 ]

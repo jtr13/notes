@@ -69,7 +69,10 @@
 <li><a href="./">Notes</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="#prerequisites"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="#bookdown"><i class="fa fa-check"></i><b>1</b> Bookdown</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="#code-styling"><i class="fa fa-check"></i><b>1.1</b> Code Styling</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="#font-awesome"><i class="fa fa-check"></i><b>1.2</b> Font Awesome</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -95,9 +98,41 @@
 <p class="author"><em>Joyce Robbins</em></p>
 <p class="date"><em>2019-11-09</em></p>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
+<div id="bookdown" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Bookdown</h1>
+<div id="code-styling" class="section level2">
+<h2><span class="header-section-number">1.1</span> Code Styling</h2>
+<p>Have tried everything to control the background color of code chunks as in myslidy.css (see d3 lectures folder) to no avail. Gitbook appears to work differently.</p>
+<p>I can control some things but not all.</p>
+<p>Works:</p>
+<pre><code>  pre {
+    font-size: 200%;
+    font-weight: bold;
+    width: 80%;
+  }
 
+  .sourceCode {
+   font-size: 200%;
+   width: 40%;
+}</code></pre>
+<p>Doesn’t work:</p>
+<pre><code>  pre {
+    font-family: &quot;Times New Roman&quot;;
+    border-color: green;
+    color: orange;
+    background-color: green;
+  }</code></pre>
+<p>This works for <code>&lt;div class=&quot;sourceCode&quot;&gt;</code> not
+<code>&lt;pre class=&quot;sourceCode&quot;&gt;</code></p>
+<pre><code>.sourceCode {
+   background-color: green;
+}</code></pre>
+</div>
+<div id="font-awesome" class="section level2">
+<h2><span class="header-section-number">1.2</span> Font Awesome</h2>
+<p>Use only 5.1.0 or earlier</p>
+
+</div>
 </div>
             </section>
 
