@@ -8,51 +8,9 @@ edit: https://github.com/jtr13/cc19/edit/master/%s
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
-# Bookdown
+# rmarkdown
 
-## Code Styling
+## Verbatim code chunks
 
-Have tried everything to control the background color of code chunks as in myslidy.css (see d3 lectures folder) to no avail.  Gitbook appears to work differently.
-
-I can control some things but not all.
-
-Works:
-
-```
-  pre {
-    font-size: 200%;
-    font-weight: bold;
-    width: 80%;
-  }
-
-  .sourceCode {
-   font-size: 200%;
-   width: 40%;
-}
-```
-
-Doesn't work:
-
-```
-  pre {
-    font-family: "Times New Roman";
-    border-color: green;
-    color: orange;
-    background-color: green;
-  }
-```
-
-This works for `<div class="sourceCode">` not
-`<pre class="sourceCode">`
-
-```
-.sourceCode {
-   background-color: green;
-}
-```
-
-## Font Awesome
-
-Use only 5.1.0 or earlier
-
+https://rmarkdown.rstudio.com/articles_verbatim.html
 

@@ -1,0 +1,87 @@
+# bookdown
+
+## Code styling
+
+
+Have tried everything to control the background color of code chunks as in myslidy.css (see d3 lectures folder) to no avail.  Gitbook appears to work differently.
+
+I can control some things but not all.
+
+Works:
+
+```
+pre {
+  font-size: 200%;
+  font-weight: bold;
+  width: 80%;
+}
+
+.sourceCode {
+  font-size: 200%;
+  width: 40%;
+}
+```
+
+Doesn't work:
+
+```
+  pre {
+    font-family: "Times New Roman";
+    border-color: green;
+    color: orange;
+    background-color: green;
+  }
+```
+
+This works for `<div class="sourceCode">` not
+`<pre class="sourceCode">`
+
+```
+.sourceCode {
+   background-color: green;
+}
+```
+
+## Font awesome
+
+<code><pre>```{r setup, include=FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```</pre></code>
+
+
+```
+<i class="fa fa-file"></i>
+```
+
+https://github.com/rstudio/rmarkdown/issues/813
+
+
+Use only 5.1.0 or earlier
+
+## Tables
+
+### Adjust column width with knitr
+
+`html_table_width()` function: https://github.com/rstudio/bookdown/issues/122
+
+### Line breaks in table cells with knitr
+
+add `<br>`
+
+(doesn't work with `format="html"`)
+
+### Line breaks in table cells with knitr, using `format="html"`
+
+create actual line breaks in text with command-enter (see [this sheet](https://docs.google.com/spreadsheets/d/1iwCNcK1GWV7r7fIhDw-OCzD2juFSUrefPj-XaZ5hYs0/edit#gid=0){target="_blank"})
+
+use `knitr::kable(... format = "html")` and style the table with `<table style="white-space:pre-line; word-wrap:break-word;">`
+
+*creates an extra line at the beginning of each cell that I can't get rid of*
+
+```{r}
+x <- data.frame(a = "asdf asdf", b = "asdf<br>asdf")
+knitr::kable(x)
+knitr::kable(x, format="html")
+```
+
+
