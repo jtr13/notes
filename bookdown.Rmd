@@ -44,25 +44,30 @@ This works for `<div class="sourceCode">` not
 
 ## Font awesome
 
-<code><pre>```{r setup, include=FALSE}
+````
+`r ''````{r setup, include=FALSE}
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
-```</pre></code>
-
-
 ```
-<i class="fa fa-file"></i>
+````
+
+```{r setup, include=FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-https://github.com/rstudio/rmarkdown/issues/813
+
+[https://github.com/rstudio/rmarkdown/issues/813](https://github.com/rstudio/rmarkdown/issues/813){target="blank"}
 
 
 Use only 5.1.0 or earlier
 
 Can't find a cheatsheet for 5.1.0; here's the official 4.7.0 list:
 
-https://fontawesome.com/v4.7.0/icons/
+[https://fontawesome.com/v4.7.0/icons/](https://fontawesome.com/v4.7.0/icons/){target="blank"}
 
-<i class="fa fa-binoculars" aria-hidden="true"></i>
+`<i class="fa fa-fort-awesome"></i>`
+<i class="fa fa-fort-awesome"></i>
+
+
 
 ## Tables
 
