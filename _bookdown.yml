@@ -6,3 +6,7 @@ language:
     chapter_name: "Chapter "
 view: https://github.com/jtr13/notes/blob/master/%s
 edit: https://github.com/jtr13/notes/edit/master/%s
+
+rmd_files:
+  ["rmarkdown.Rmd",
+   "bookdown.Rmd"]

@@ -69,33 +69,3 @@ Can't find a cheatsheet for 5.1.0; here's the official 4.7.0 list:
 
 
 
-## Tables
-
-### Adjust column width with knitr
-
-`html_table_width()` function: https://github.com/rstudio/bookdown/issues/122
-
-### Line breaks in table cells with knitr
-
-*best option*
-
-add `<br>`
-
-
-```{r}
-x <- data.frame(a = "asdf asdf", b = "asdf<br>asdf")
-knitr::kable(x)
-```
-
-
-(doesn't work with `format="html"`)
-
-### Line breaks in table cells with knitr, using `format="html"`
-
-create actual line breaks in text with command-enter (see [this sheet](https://docs.google.com/spreadsheets/d/1iwCNcK1GWV7r7fIhDw-OCzD2juFSUrefPj-XaZ5hYs0/edit#gid=0){target="_blank"})
-
-use `knitr::kable(... format = "html")` and style the table with `<table style="white-space:pre-line; word-wrap:break-word;">`
-
-*creates an extra line at the beginning of each cell that I can't get rid of*
-
-

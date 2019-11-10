@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
+<link rel="prev" href="rmarkdown.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -133,17 +133,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Notes</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> rmarkdown</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#verbatim-code-chunks"><i class="fa fa-check"></i><b>1.1</b> Verbatim code chunks</a></li>
+<li class="chapter" data-level="1" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>1</b> rmarkdown</a><ul>
+<li class="chapter" data-level="1.1" data-path="rmarkdown.html"><a href="rmarkdown.html#tables"><i class="fa fa-check"></i><b>1.1</b> Tables</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="rmarkdown.html"><a href="rmarkdown.html#adjust-column-width-with-knitrkable"><i class="fa fa-check"></i><b>1.1.1</b> Adjust column width with knitr::kable()</a></li>
+<li class="chapter" data-level="1.1.2" data-path="rmarkdown.html"><a href="rmarkdown.html#line-breaks-in-table-cells-with-knitrkable"><i class="fa fa-check"></i><b>1.1.2</b> Line breaks in table cells with knitr::kable()</a></li>
+<li class="chapter" data-level="1.1.3" data-path="rmarkdown.html"><a href="rmarkdown.html#line-breaks-in-table-cells-with-knitrkable-using-formathtml"><i class="fa fa-check"></i><b>1.1.3</b> Line breaks in table cells with knitr::kable(), using <code>format=&quot;html&quot;</code></a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="rmarkdown.html"><a href="rmarkdown.html#verbatim-code-chunks"><i class="fa fa-check"></i><b>1.2</b> Verbatim code chunks</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>2</b> bookdown</a><ul>
 <li class="chapter" data-level="2.1" data-path="bookdown.html"><a href="bookdown.html#code-styling"><i class="fa fa-check"></i><b>2.1</b> Code styling</a></li>
 <li class="chapter" data-level="2.2" data-path="bookdown.html"><a href="bookdown.html#font-awesome"><i class="fa fa-check"></i><b>2.2</b> Font awesome</a></li>
-<li class="chapter" data-level="2.3" data-path="bookdown.html"><a href="bookdown.html#tables"><i class="fa fa-check"></i><b>2.3</b> Tables</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="bookdown.html"><a href="bookdown.html#adjust-column-width-with-knitr"><i class="fa fa-check"></i><b>2.3.1</b> Adjust column width with knitr</a></li>
-<li class="chapter" data-level="2.3.2" data-path="bookdown.html"><a href="bookdown.html#line-breaks-in-table-cells-with-knitr"><i class="fa fa-check"></i><b>2.3.2</b> Line breaks in table cells with knitr</a></li>
-<li class="chapter" data-level="2.3.3" data-path="bookdown.html"><a href="bookdown.html#line-breaks-in-table-cells-with-knitr-using-formathtml"><i class="fa fa-check"></i><b>2.3.3</b> Line breaks in table cells with knitr, using <code>format=&quot;html&quot;</code></a></li>
-</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -206,42 +206,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 <p><a href="https://fontawesome.com/v4.7.0/icons/" target="blank">https://fontawesome.com/v4.7.0/icons/</a></p>
 <p><code>&lt;i class=&quot;fa fa-fort-awesome&quot;&gt;&lt;/i&gt;</code>
 <i class="fa fa-fort-awesome"></i></p>
-</div>
-<div id="tables" class="section level2">
-<h2><span class="header-section-number">2.3</span> Tables</h2>
-<div id="adjust-column-width-with-knitr" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Adjust column width with knitr</h3>
-<p><code>html_table_width()</code> function: <a href="https://github.com/rstudio/bookdown/issues/122" class="uri">https://github.com/rstudio/bookdown/issues/122</a></p>
-</div>
-<div id="line-breaks-in-table-cells-with-knitr" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Line breaks in table cells with knitr</h3>
-<p><em>best option</em></p>
-<p>add <code>&lt;br&gt;</code></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a =</span> <span class="st">&quot;asdf asdf&quot;</span>, <span class="dt">b =</span> <span class="st">&quot;asdf&lt;br&gt;asdf&quot;</span>)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(x)</a></code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">a</th>
-<th align="left">b</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">asdf asdf</td>
-<td align="left">asdf<br>asdf</td>
-</tr>
-</tbody>
-</table>
-<p>(doesn’t work with <code>format=&quot;html&quot;</code>)</p>
-</div>
-<div id="line-breaks-in-table-cells-with-knitr-using-formathtml" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Line breaks in table cells with knitr, using <code>format=&quot;html&quot;</code></h3>
-<p>create actual line breaks in text with command-enter (see <a href="https://docs.google.com/spreadsheets/d/1iwCNcK1GWV7r7fIhDw-OCzD2juFSUrefPj-XaZ5hYs0/edit#gid=0" target="_blank">this sheet</a>)</p>
-<p>use <code>knitr::kable(... format = &quot;html&quot;)</code> and style the table with <code>&lt;table style=&quot;white-space:pre-line; word-wrap:break-word;&quot;&gt;</code></p>
-<p><em>creates an extra line at the beginning of each cell that I can’t get rid of</em></p>
 
-</div>
 </div>
 </div>
             </section>
@@ -249,7 +214,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rmarkdown.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
