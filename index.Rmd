@@ -3,7 +3,6 @@ title: "Notes"
 author: "Joyce Robbins"
 date: "`r Sys.Date()`"
 description: "Random notes about bookdown and other stuff."
-
 ---
 
 # rmarkdown
