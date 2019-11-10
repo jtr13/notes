@@ -66,6 +66,8 @@ Use only 5.1.0 or earlier
 
 ### Line breaks in table cells with knitr
 
+*best option*
+
 add `<br>`
 
 (doesn't work with `format="html"`)
