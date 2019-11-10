@@ -1,0 +1,12 @@
+--- 
+title: "Notes"
+author: "Joyce Robbins"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+view: https://github.com/jtr13/cc19/blob/master/%s
+edit: https://github.com/jtr13/cc19/edit/master/%s
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+# Prerequisites
+
