@@ -13,3 +13,6 @@ description: "Random notes about bookdown and other stuff."
 
 https://rmarkdown.rstudio.com/articles_verbatim.html
 
+Why it works:
+
+https://yihui.name/en/2017/11/knitr-verbatim-code-chunk/
