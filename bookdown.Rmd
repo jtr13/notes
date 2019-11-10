@@ -58,6 +58,12 @@ https://github.com/rstudio/rmarkdown/issues/813
 
 Use only 5.1.0 or earlier
 
+Can't find a cheatsheet for 5.1.0; here's the official 4.7.0 list:
+
+https://fontawesome.com/v4.7.0/icons/
+
+<i class="fa fa-binoculars" aria-hidden="true"></i>
+
 ## Tables
 
 ### Adjust column width with knitr
