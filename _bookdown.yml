@@ -1,6 +1,8 @@
-book_filename: "publishing"
+book_filename: "notes"
 output_dir: docs
 delete_merged_file: true
 language:
   ui:
     chapter_name: "Chapter "
+view: https://github.com/jtr13/notes/blob/master/%s
+edit: https://github.com/jtr13/notes/edit/master/%s
