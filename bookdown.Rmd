@@ -67,5 +67,15 @@ Can't find a cheatsheet for 5.1.0; here's the official 4.7.0 list:
 `<i class="fa fa-fort-awesome"></i>`
 <i class="fa fa-fort-awesome"></i>
 
+## CORS error in Chrome Console
+
+(Applies only to viewing Console locally, caused by `search_index.json`)
+
+Best solution: run a local server from rendered book folder
+
+Or, open Chrome from Terminal with:
+
+`/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files`
 
 
+ 

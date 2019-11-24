@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 bookdown | Notes</title>
   <meta name="description" content="Random notes about bookdown and other stuff." />
-  <meta name="generator" content="bookdown 0.14.1 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 bookdown | Notes" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Joyce Robbins" />
 
 
-<meta name="date" content="2019-11-10" />
+<meta name="date" content="2019-11-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,6 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>2</b> bookdown</a><ul>
 <li class="chapter" data-level="2.1" data-path="bookdown.html"><a href="bookdown.html#code-styling"><i class="fa fa-check"></i><b>2.1</b> Code styling</a></li>
 <li class="chapter" data-level="2.2" data-path="bookdown.html"><a href="bookdown.html#font-awesome"><i class="fa fa-check"></i><b>2.2</b> Font awesome</a></li>
+<li class="chapter" data-level="2.3" data-path="bookdown.html"><a href="bookdown.html#cors-error-in-chrome-console"><i class="fa fa-check"></i><b>2.3</b> CORS error in Chrome Console</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -206,6 +207,13 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 <p><a href="https://fontawesome.com/v4.7.0/icons/" target="blank">https://fontawesome.com/v4.7.0/icons/</a></p>
 <p><code>&lt;i class=&quot;fa fa-fort-awesome&quot;&gt;&lt;/i&gt;</code>
 <i class="fa fa-fort-awesome"></i></p>
+</div>
+<div id="cors-error-in-chrome-console" class="section level2">
+<h2><span class="header-section-number">2.3</span> CORS error in Chrome Console</h2>
+<p>(Applies only to viewing Console locally, caused by <code>search_index.json</code>)</p>
+<p>Best solution: run a local server from rendered book folder</p>
+<p>Or, open Chrome from Terminal with:</p>
+<p><code>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files</code></p>
 
 </div>
 </div>
@@ -231,6 +239,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "linkedin": false,
