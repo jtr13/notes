@@ -85,4 +85,14 @@ Not clear how **rmarkdown** use of `clipboard.js` interacts with **klippy** vers
 
 **rmarkdown** css for clipboard button however seems to take precedence over **klippy** so `klippy(position = ...)` doesn't work. If `class.source='klippy'` is added as a chunk option (see `?klippy`) no clipboard appears at all.
 
+## `knitr::write_bib()`
+
+Getting a lot of warnings from `knitr::write_bib()`. `write_bib()` calls `citation()` with `auto=TRUE`. This creates a problem for the dev versions since they don't have a `Date/Publication` field, apparently it is added by CRAN.
+
+```{r}
+library(ggplot2)
+packageVersion("ggplot2")
+citation("ggplot2", auto=TRUE)
+```
+
  
