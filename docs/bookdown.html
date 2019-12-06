@@ -24,7 +24,7 @@
 <meta name="author" content="Joyce Robbins" />
 
 
-<meta name="date" content="2019-12-05" />
+<meta name="date" content="2019-12-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -142,11 +142,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#verbatim-code-chunks"><i class="fa fa-check"></i><b>1.2</b> Verbatim code chunks</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>2</b> bookdown</a><ul>
-<li class="chapter" data-level="2.1" data-path="bookdown.html"><a href="bookdown.html#code-styling"><i class="fa fa-check"></i><b>2.1</b> Code styling</a></li>
-<li class="chapter" data-level="2.2" data-path="bookdown.html"><a href="bookdown.html#font-awesome"><i class="fa fa-check"></i><b>2.2</b> Font awesome</a></li>
-<li class="chapter" data-level="2.3" data-path="bookdown.html"><a href="bookdown.html#cors-error-in-chrome-console"><i class="fa fa-check"></i><b>2.3</b> CORS error in Chrome Console</a></li>
-<li class="chapter" data-level="2.4" data-path="bookdown.html"><a href="bookdown.html#copy-and-paste-javascript-code"><i class="fa fa-check"></i><b>2.4</b> Copy and paste JavaScript code</a></li>
-<li class="chapter" data-level="2.5" data-path="bookdown.html"><a href="bookdown.html#knitrwrite_bib"><i class="fa fa-check"></i><b>2.5</b> <code>knitr::write_bib()</code></a></li>
+<li class="chapter" data-level="2.1" data-path="bookdown.html"><a href="bookdown.html#figures"><i class="fa fa-check"></i><b>2.1</b> Figures</a></li>
+<li class="chapter" data-level="2.2" data-path="bookdown.html"><a href="bookdown.html#code-styling"><i class="fa fa-check"></i><b>2.2</b> Code styling</a></li>
+<li class="chapter" data-level="2.3" data-path="bookdown.html"><a href="bookdown.html#font-awesome"><i class="fa fa-check"></i><b>2.3</b> Font awesome</a></li>
+<li class="chapter" data-level="2.4" data-path="bookdown.html"><a href="bookdown.html#cors-error-in-chrome-console"><i class="fa fa-check"></i><b>2.4</b> CORS error in Chrome Console</a></li>
+<li class="chapter" data-level="2.5" data-path="bookdown.html"><a href="bookdown.html#copy-and-paste-javascript-code"><i class="fa fa-check"></i><b>2.5</b> Copy and paste JavaScript code</a></li>
+<li class="chapter" data-level="2.6" data-path="bookdown.html"><a href="bookdown.html#knitrwrite_bib"><i class="fa fa-check"></i><b>2.6</b> <code>knitr::write_bib()</code></a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -170,8 +171,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bookdown" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> bookdown</h1>
+<div id="figures" class="section level2">
+<h2><span class="header-section-number">2.1</span> Figures</h2>
+<p><code>out.width</code> seems to be the secret to controlling figure sizes simultaneously in gitbook and pdf_book formats:</p>
+<pre><code>```{r, out.width='25%', fig.align='center', echo=FALSE}
+webshot::webshot("http://www.clocktab.com", selector="#timeTable")
+```</code></pre>
+<p><img src="notes_files/figure-html/unnamed-chunk-4-1.png" width="25%" style="display: block; margin: auto;" /></p>
+</div>
 <div id="code-styling" class="section level2">
-<h2><span class="header-section-number">2.1</span> Code styling</h2>
+<h2><span class="header-section-number">2.2</span> Code styling</h2>
 <p>Have tried everything to control the background color of code chunks as in myslidy.css (see d3 lectures folder) to no avail. Gitbook appears to work differently.</p>
 <p>I can control some things but not all.</p>
 <p>Works:</p>
@@ -199,7 +208,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 }</code></pre>
 </div>
 <div id="font-awesome" class="section level2">
-<h2><span class="header-section-number">2.2</span> Font awesome</h2>
+<h2><span class="header-section-number">2.3</span> Font awesome</h2>
 <pre><code>```{r setup, include=FALSE}
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```</code></pre>
@@ -211,20 +220,20 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 <i class="fa fa-fort-awesome"></i></p>
 </div>
 <div id="cors-error-in-chrome-console" class="section level2">
-<h2><span class="header-section-number">2.3</span> CORS error in Chrome Console</h2>
+<h2><span class="header-section-number">2.4</span> CORS error in Chrome Console</h2>
 <p>(Applies only to viewing Console locally, caused by <code>search_index.json</code>)</p>
 <p>Best solution: run a local server from rendered book folder</p>
 <p>Or, open Chrome from Terminal with:</p>
 <p><code>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files</code></p>
 </div>
 <div id="copy-and-paste-javascript-code" class="section level2">
-<h2><span class="header-section-number">2.4</span> Copy and paste JavaScript code</h2>
+<h2><span class="header-section-number">2.5</span> Copy and paste JavaScript code</h2>
 <p>Include: <code>klippy::klippy(&quot;js&quot;)</code> somewhere</p>
 <p>Not clear how <strong>rmarkdown</strong> use of <code>clipboard.js</code> interacts with <strong>klippy</strong> version but this appears to work.</p>
 <p><strong>rmarkdown</strong> css for clipboard button however seems to take precedence over <strong>klippy</strong> so <code>klippy(position = ...)</code> doesn’t work. If <code>class.source='klippy'</code> is added as a chunk option (see <code>?klippy</code>) no clipboard appears at all.</p>
 </div>
 <div id="knitrwrite_bib" class="section level2">
-<h2><span class="header-section-number">2.5</span> <code>knitr::write_bib()</code></h2>
+<h2><span class="header-section-number">2.6</span> <code>knitr::write_bib()</code></h2>
 <p>Getting a lot of warnings from <code>knitr::write_bib()</code>. <code>write_bib()</code> calls <code>citation()</code> with <code>auto=TRUE</code>. This creates a problem for the dev versions since they don’t have a <code>Date/Publication</code> field, apparently it is added by CRAN.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
 <a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">packageVersion</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
@@ -237,8 +246,8 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ## 
 ##   Hadley Wickham, Winston Chang, Lionel Henry, Thomas Lin
 ##   Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki
-##   Yutani and Dewey Dunnington (2019). ggplot2: Create Elegant
-##   Data Visualisations Using the Grammar of Graphics.
+##   Yutani and Dewey Dunnington (2019). ggplot2: Create
+##   Elegant Data Visualisations Using the Grammar of Graphics.
 ##   http://ggplot2.tidyverse.org,
 ##   https://github.com/tidyverse/ggplot2.
 ## 

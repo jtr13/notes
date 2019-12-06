@@ -1,5 +1,18 @@
 # bookdown
 
+## Figures
+
+`out.width` seems to be the secret to controlling figure sizes simultaneously in gitbook and pdf_book formats:
+
+<pre><code>```{r, out.width='25%', fig.align='center', echo=FALSE}
+webshot::webshot("http://www.clocktab.com", selector="#timeTable")
+```</code></pre>
+
+```{r, out.width='25%', fig.align='center', echo=FALSE}
+webshot::webshot("http://www.clocktab.com", selector="#timeTable")
+```
+
+
 ## Code styling
 
 
