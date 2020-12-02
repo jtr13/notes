@@ -108,4 +108,22 @@ packageVersion("ggplot2")
 citation("ggplot2", auto=TRUE)
 ```
 
+## Github Actions
+
+Uses GitHub Pages: https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e
+
+Uses Netlify: https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/
+
+### Tokens
+
+**GitHub Pages**:  Create GitHub secrets GH_PAT and EMAIL. GH_PAT is a personal access token with repository access. EMAIL is the mail address you use to login to GitHub.  
+
+GH_PAT: Go to the developer settings of your GitHub account and create a new token. Copy the code you’ll receive and go to your repository’s secrets in the tab “settings” (https://github.com/<username>/<repo>/settings/secrets) and create a new secret named GH_PAT and paste the code of the token.  
+  
+EMAIL: Go to your repository’s secrets in the tab “settings” (https://github.com/<username>/<repo>/settings/secrets) and create a new secret named EMAIL and enter your mail address that you use to login to GitHub.
+
+**Netlify**: create token in Netlify, add to GitHub Secrets as NETLIFY_AUTH_TOKEN
+
+
+
  
